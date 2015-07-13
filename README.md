@@ -1,10 +1,15 @@
 # WP-Post-Type-Resolver (Wordpress Plugin)
-Wordpress Plugin, which return the post type of a given post (usefull for AJAX Requests).
+Wordpress Plugin, which return the `post type` of a given post (usefull for AJAX Requests).
 
 
-Response:
+### HTTP `REQUEST`:
+```
+/post-type-resolver/... + ID
+```
+
+###JSON `RESPONSE`:
 ```
 {
-	"post_type": "jobs"
+	"post_type": "custom-post-type-name"
 }
 ```
