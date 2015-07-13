@@ -6,15 +6,14 @@ Simple and easy Wordpress Plugin, which return the `post type` of a given post (
 ```
 /post-type-resolver/10
 ```
-or
-```
-/post-type-resolver/speacial-site
-```
 
 ###JSON `RESPONSE`
 ```json
 {
-	"post_type": "custom-post-type-name"
+	"ID": 46,
+	"post_type": "jobs",
+	"slug": "ux-konzepter-designer",
+	"title": "UX Konzepter & Designer"
 }
 ```
 
