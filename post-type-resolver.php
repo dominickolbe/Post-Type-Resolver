@@ -51,11 +51,47 @@ class PostTypeResolver
         
         header('Content-type: application/json');
         
-        $post = get_post($var);
+        $post_types = $this->getPostTypes();
         
-        $array = array("ID" => $post->ID, "post_type" => get_post_type($post), "slug" => $post->post_name, "title" => $post->post_title);
+        $post = $this->getPostIDbySlug($var, $post_types);
         
-        echo json_encode($array);
+        if ($post) {
+            
+            $array = array("ID" => $post->ID, "post_type" => get_post_type($post), "slug" => $post->post_name, "title" => $post->post_title);
+            
+            echo json_encode($array);
+        } 
+        else {
+            echo "no post found";
+        }
+    }
+    
+    function getPostTypes() {
+        
+        $array = array("post");
+        
+        $args = array('public' => true, '_builtin' => false);
+        
+        $post_types = get_post_types($args, 'names', 'and');
+        
+        foreach ($post_types as $post_type) {
+            
+            array_push($array, $post_type);
+        }
+        
+        return $array;
+    }
+    
+    function getPostIDbySlug($slug, $post_types) {
+        
+        $args = array('name' => $slug, 'post_type' => $post_types, 'post_status' => 'publish', 'numberposts' => 1);
+        $post = get_posts($args);
+        if ($post) {
+            return $post[0];
+        } 
+        else {
+            return false;
+        }
     }
 }
 

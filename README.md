@@ -4,7 +4,7 @@ Simple and easy Wordpress Plugin, which return the `post type` of a given post (
 
 ### HTTP `REQUEST`
 ```
-/post-type-resolver/10
+/post-type-resolver/ux-konzepter-designer
 ```
 
 ###JSON `RESPONSE`
