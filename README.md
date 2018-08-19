@@ -11,10 +11,10 @@
 `JSON RESPONSE`
 ```json
 {
-  "ID": 46,
-  "post_type": "jobs",
-  ": "ux-konzepter-designer",
-  ": "UX Konzepter & Designer"
+	"ID": 46,
+	"post_type": "jobs",
+	"slug": "ux-konzepter-designer",
+	"title": "UX Konzepter & Designer"
 }
 ```
 
