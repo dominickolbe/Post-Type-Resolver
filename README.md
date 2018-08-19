@@ -1,31 +1,28 @@
 # WP-Post-Type-Resolver (Wordpress Plugin)
-Simple and easy Wordpress Plugin, which return the `post type` of a given post (usefull for AJAX Requests).
+> Simple and easy Wordpress Plugin, which returns the `post type` of a given post (useful for AJAX Requests).
 
 
-### HTTP `REQUEST`
+## API
+`GET`
 ```
 /post-type-resolver/ux-konzepter-designer
 ```
 
-###JSON `RESPONSE`
+`JSON RESPONSE`
 ```json
 {
-	"ID": 46,
-	"post_type": "jobs",
-	"slug": "ux-konzepter-designer",
-	"title": "UX Konzepter & Designer"
+  "ID": 46,
+  "post_type": "jobs",
+  ": "ux-konzepter-designer",
+  ": "UX Konzepter & Designer"
 }
 ```
 
-### Issues
+## Issues
 
 [view/create issues here](https://github.com/dominickolbe/WP-Post-Type-Resolver/issues)
 
+## License
+MIT License
 
-
-### Version
-1.0
-
-License
-----
-MIT
+Copyright (c) 2018 [Dominic Kolbe](https://dominickolbe.dk)
