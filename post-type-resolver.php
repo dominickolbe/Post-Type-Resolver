@@ -3,9 +3,9 @@
 /*
 Plugin Name: WP Post Type Resolver
 Plugin URI: https://github.com/dominickolbe/WP-Post-Type-Resolver
-Description: Wordpress Plugin, which return the post type of a given post (usefull for AJAX Requests).
+Description: Wordpress Plugin, which returns the post type of a given post (useful for AJAX Requests).
 Author: Dominic Kolbe
-Author URI: http://dominickolbe.dk
+Author URI: https://dominickolbe.dk
 Version: 1.0
 */
 
@@ -98,12 +98,12 @@ class PostTypeResolver
 $MyPluginCode = new PostTypeResolver();
 register_activation_hook(__file__, array($MyPluginCode, 'activate'));
 
-// Using a filter instead of an action to create the rewrite rules.
+// Using a filter instead of an action to create the rewrite rules
 // Write rules -> Add query vars -> Recalculate rewrite rules
 add_filter('rewrite_rules_array', array($MyPluginCode, 'create_rewrite_rules'));
 add_filter('query_vars', array($MyPluginCode, 'add_query_vars'));
 
-// Recalculates rewrite rules during admin init to save resourcees.
+// Recalculates rewrite rules during admin init to save resources
 // Could probably run it once as long as it isn't going to change or check the
 // $wp_rewrite rules to see if it's active.
 add_filter('admin_init', array($MyPluginCode, 'flush_rewrite_rules'));
